@@ -3,161 +3,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Lidon Barberá - Manegueta / Estado libre asociado">
-<title>Lidon Barberá</title>
+<meta name="description" content="Lidón Barberá - Hago cosas">
+<title>Lidón Barberá</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&family=Bitter:ital@0;1&display=swap" rel="stylesheet">
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
-  background-color: #1E1E1E;
-  color: #FFFFFF;
+  font-family: 'Jost', sans-serif;
+  background-color: #F4F5F7;
+  color: #1E1E1E;
   line-height: 1.6;
-  padding: 40px 20px;
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 48px 20px;
+  min-height: 100vh;
 }
-header {
-  margin-bottom: 40px;
+.wrap { max-width: 560px; margin: 0 auto; }
+.header { display: flex; align-items: center; gap: 1.25rem; margin-bottom: 2.5rem; }
+.photo {
+  width: 76px; height: 76px; border-radius: 50%;
+  object-fit: cover; object-position: center top;
+  border: 2px solid #C4CCEE; flex-shrink: 0;
 }
-/* .photo {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 0 auto 30px;
-  display: block;
-  object-fit: cover;
-  border: 3px solid #293985;
-} */
-h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #FFFFFF;
+.name { font-size: 1.75rem; font-weight: 500; color: #1E1E1E; margin-bottom: 0.2rem; letter-spacing: -0.02em; }
+.tagline { font-family: 'Bitter', serif; font-size: 0.9rem; color: #666; font-style: italic; }
+.card { background: #FFFFFF; border: 1px solid #E2E5F0; border-radius: 12px; padding: 1.1rem 1.25rem; margin-bottom: 0.75rem; }
+.card-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 0.65rem; }
+.card-name { font-size: 0.975rem; font-weight: 500; color: #1E1E1E; margin-bottom: 0.2rem; }
+.card-desc { font-family: 'Bitter', serif; font-size: 0.8rem; color: #293985; font-style: italic; line-height: 1.5; }
+.card-num {
+  font-size: 10px; font-weight: 500; color: #293985; background: #E8ECFF;
+  padding: 3px 8px; border-radius: 20px; margin-left: 12px;
+  white-space: nowrap; flex-shrink: 0; letter-spacing: 0.05em;
 }
-.subtitle {
-  font-size: 1.2rem;
-  color: #00BFFF;
-  font-weight: 400;
-  margin-bottom: 30px;
+.links { display: flex; flex-wrap: wrap; gap: 6px; }
+.link {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 12px; background: #F2F4FF; border-radius: 20px;
+  font-size: 12px; color: #293985; text-decoration: none;
+  border: 1px solid #D0D6F0; transition: background 0.15s, border-color 0.15s;
 }
-.poem {
-  background-color: #293985;
-  padding: 25px;
-  border-radius: 8px;
-  margin-bottom: 40px;
-  font-style: italic;
-  line-height: 1.8;
-  color: #FFFFFF;
+.link:hover { background: #E4E8FF; border-color: #B0BAEE; }
+.link svg {
+  width: 13px; height: 13px; stroke: currentColor; fill: none;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0;
 }
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #FFFFFF;
-  font-weight: 600;
-}
-.projects {
-  list-style: none;
-}
-.projects li {
-  margin-bottom: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #293985;
-}
-.projects li:last-child {
-  border-bottom: none;
-  padding-bottom: 0;
-}
-.project-name {
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #00BFFF;
-  margin-bottom: 5px;
-}
-.project-description {
-  color: #CCCCCC;
-  margin-bottom: 8px;
-  font-size: 0.95rem;
-}
-.project-link {
-  color: #D4A017;
-  text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.2s;
-}
-.project-link:hover {
-  text-decoration: underline;
-  color: #FFD700;
-}
-footer {
-  margin-top: 50px;
-  text-align: center;
-  font-style: italic;
-  color: #00BFFF;
-  font-size: 1.1rem;
-}
-.disclaimer {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #CCCCCC;
-}
-@media (max-width: 600px) {
-  h1 { font-size: 2rem; }
-  .subtitle { font-size: 1rem; }
-  .poem { padding: 20px; font-size: 0.95rem; }
-  .project-name { font-size: 1.1rem; }
-}
+@media (max-width: 480px) { body { padding: 32px 16px; } .name { font-size: 1.5rem; } }
 </style>
 </head>
 <body>
-<header>
-  <!-- <img src="foto.jpg" alt="Lidon Barberá" class="photo"> -->
-  <h1>Lidon Barberá</h1>
-  <div class="subtitle">Manegueta / Estado libre asociado</div>
-</header>
+<div class="wrap">
 
-<div class="poem">
-  Soc la maneta del rellotge,<br>
-  que no para de donar voltes,<br>
-  que mai no està on cal que estiga,<br>
-  que sempre va i que sempre torna.
+  <div class="header">
+    <img class="photo" src="foto.jpg" alt="Lidón Barberá">
+    <div>
+      <div class="name">Lidón Barberá</div>
+      <div class="tagline">Hago cosas ⚡🤸🏼‍♂️🧗🏻✍🏻</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-name">⚫ Siempre Otra Cosa</div>
+        <div class="card-desc">Marketing, tecnología, consumo responsable y cosas de esas</div>
+      </div>
+      <span class="card-num">01</span>
+    </div>
+    <div class="links">
+      <a href="https://lidonbarbera.substack.com/" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="3"/><rect x="3" y="10" width="18" height="3"/><path d="M3 17l9 4 9-4v-4H3v4z"/></svg>
+        Substack
+      </a>
+      <a href="https://instagram.com/siempreotracosa" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a href="https://open.spotify.com/show/033dA775dAQ8B4VvavrCgy" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 13.5c2.5-1 5.5-1 8 0M7 10.5c3-1.3 7-1.3 10 0M9 16.5c2-0.7 4-0.7 6 0"/></svg>
+        Podcast
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-name">📢 Les del Buró</div>
+        <div class="card-desc">Podcast en valencià de dones parlant a dones</div>
+      </div>
+      <span class="card-num">02</span>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/lesdelburo" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a href="https://open.spotify.com/show/3PAxVhYifPumgyLqjRGlm2" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 13.5c2.5-1 5.5-1 8 0M7 10.5c3-1.3 7-1.3 10 0M9 16.5c2-0.7 4-0.7 6 0"/></svg>
+        Spotify
+      </a>
+      <a href="https://podcasts.apple.com/es/podcast/les-del-bur%C3%B3/id1896037615" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 7a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM9 17c0-2 1.3-3 3-3s3 1 3 3"/></svg>
+        Apple Podcasts
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-name">🍷 Pues la vida era esto</div>
+        <div class="card-desc">Lo que pasa cuando no trabajo</div>
+      </div>
+      <span class="card-num">03</span>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/pueslavidaeraesto" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+      <a href="https://diasdevinoygusanitos.substack.com/" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="3"/><rect x="3" y="10" width="18" height="3"/><path d="M3 17l9 4 9-4v-4H3v4z"/></svg>
+        Substack
+      </a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-top">
+      <div>
+        <div class="card-name">🏭 The Fake Crafting Co.</div>
+        <div class="card-desc">Lo que hago con las manos (a veces)</div>
+      </div>
+      <span class="card-num">04</span>
+    </div>
+    <div class="links">
+      <a href="https://www.instagram.com/thefakecraftingco" class="link" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/></svg>
+        Instagram
+      </a>
+    </div>
+  </div>
+
 </div>
-
-<section>
-  <h2>Cosas en las que me meto</h2>
-  <ul class="projects">
-    <li>
-      <div class="project-name">SOC (Siempre Otra Cosa)</div>
-      <div class="project-description">Newsletter crítica sobre marketing, consumo y turbocapitalismo</div>
-      <a href="https://siempreotra.substack.com" class="project-link" target="_blank" rel="noopener noreferrer">→ siempreotra.substack.com</a>
-    </li>
-    <li>
-      <div class="project-name">Días de vino y gusanitos</div>
-      <div class="project-description">Newsletter personal</div>
-      <a href="https://lidonbarbera.substack.com" class="project-link" target="_blank" rel="noopener noreferrer">→ lidonbarbera.substack.com</a>
-    </li>
-    <li>
-      <div class="project-name">@pueslavidaeraesto</div>
-      <div class="project-description">Instagram</div>
-      <a href="https://instagram.com/pueslavidaeraesto" class="project-link" target="_blank" rel="noopener noreferrer">→ instagram.com/pueslavidaeraesto</a>
-    </li>
-    <li>
-      <div class="project-name">Podcast con Bego</div>
-      <div class="project-description">En proceso</div>
-    </li>
-    <li>
-      <div class="project-name">The Fake Crafting Co</div>
-      <div class="project-description">Pendientes de polímero que no hago</div>
-    </li>
-  </ul>
-</section>
-
-<footer>
-  No vendo nada.<br>
-  <span class="disclaimer">Ni poc ni gens.</span>
-</footer>
 </body>
 </html>
