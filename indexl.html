@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lidon Barberá - Manegueta / Estado libre asociado">
+<title>Lidon Barberá</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  line-height: 1.6;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+header {
+  margin-bottom: 40px;
+}
+/* .photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 30px;
+  display: block;
+  object-fit: cover;
+  border: 3px solid #293985;
+} */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+.subtitle {
+  font-size: 1.2rem;
+  color: #00BFFF;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.poem {
+  background-color: #293985;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  font-style: italic;
+  line-height: 1.8;
+  color: #FFFFFF;
+}
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+.projects {
+  list-style: none;
+}
+.projects li {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #293985;
+}
+.projects li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.project-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #00BFFF;
+  margin-bottom: 5px;
+}
+.project-description {
+  color: #CCCCCC;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+.project-link {
+  color: #D4A017;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.project-link:hover {
+  text-decoration: underline;
+  color: #FFD700;
+}
+footer {
+  margin-top: 50px;
+  text-align: center;
+  font-style: italic;
+  color: #00BFFF;
+  font-size: 1.1rem;
+}
+.disclaimer {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #CCCCCC;
+}
+@media (max-width: 600px) {
+  h1 { font-size: 2rem; }
+  .subtitle { font-size: 1rem; }
+  .poem { padding: 20px; font-size: 0.95rem; }
+  .project-name { font-size: 1.1rem; }
+}
+</style>
+</head>
+<body>
+<header>
+  <!-- <img src="foto.jpg" alt="Lidon Barberá" class="photo"> -->
+  <h1>Lidon Barberá</h1>
+  <div class="subtitle">Manegueta / Estado libre asociado</div>
+</header>
+
+<div class="poem">
+  Soc la maneta del rellotge,<br>
+  que no para de donar voltes,<br>
+  que mai no està on cal que estiga,<br>
+  que sempre va i que sempre torna.
+</div>
+
+<section>
+  <h2>Cosas en las que me meto</h2>
+  <ul class="projects">
+    <li>
+      <div class="project-name">SOC (Siempre Otra Cosa)</div>
+      <div class="project-description">Newsletter crítica sobre marketing, consumo y turbocapitalismo</div>
+      <a href="https://siempreotra.substack.com" class="project-link" target="_blank" rel="noopener noreferrer">→ siempreotra.substack.com</a>
+    </li>
+    <li>
+      <div class="project-name">Días de vino y gusanitos</div>
+      <div class="project-description">Newsletter personal</div>
+      <a href="https://lidonbarbera.substack.com" class="project-link" target="_blank" rel="noopener noreferrer">→ lidonbarbera.substack.com</a>
+    </li>
+    <li>
+      <div class="project-name">@pueslavidaeraesto</div>
+      <div class="project-description">Instagram</div>
+      <a href="https://instagram.com/pueslavidaeraesto" class="project-link" target="_blank" rel="noopener noreferrer">→ instagram.com/pueslavidaeraesto</a>
+    </li>
+    <li>
+      <div class="project-name">Podcast con Bego</div>
+      <div class="project-description">En proceso</div>
+    </li>
+    <li>
+      <div class="project-name">The Fake Crafting Co</div>
+      <div class="project-description">Pendientes de polímero que no hago</div>
+    </li>
+  </ul>
+</section>
+
+<footer>
+  No vendo nada.<br>
+  <span class="disclaimer">Ni poc ni gens.</span>
+</footer>
+</body>
+</html>
